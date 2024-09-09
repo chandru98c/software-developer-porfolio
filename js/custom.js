@@ -9,6 +9,30 @@ $(window).load(function () {
     overflow: "visible"
   });
 });
+// custom navigate
+// window.onload = function() {
+//   var result = confirm("Visit new portfolio?");
+//   if (result) {
+//       window.location.href = "https://santhosh-chandran-portfolio.netlify.app/";
+//   }
+// };
+window.onload = function() {
+  var modal = document.getElementById("customModal");
+  var yesBtn = document.getElementById("yesBtn");
+  var noBtn = document.getElementById("noBtn");
+
+  // Show the modal
+  modal.style.display = "flex";
+
+  // Handle button clicks
+  yesBtn.onclick = function() {
+      window.location.href = "https://santhosh-chandran-portfolio.netlify.app/";
+  };
+
+  noBtn.onclick = function() {
+      modal.style.display = "none";
+  };
+};
 
 $(document).ready(function () {
   "use strict";
