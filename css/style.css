@@ -1096,7 +1096,8 @@ fieldset {
 
 /* Modal Content */
 .modal-content {
-  background-color: #fff;
+  background: rgba(0, 0, 0, 0.146); /* Semi-transparent background */
+  backdrop-filter: blur(10px) brightness(50%); /* Apply blur and brightness */
   padding: 20px;
   border-radius: 5px;
   text-align: center;
@@ -1110,9 +1111,9 @@ fieldset {
 
 .modal-content p {
   margin: 0;
-  color: #414141;
+  color: #ffffff;
   padding-bottom: 20px;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 2rem;
   font-family: "Open Sans", sans-serif;
 }
@@ -1126,13 +1127,29 @@ fieldset {
 }
 
 #yesBtn {
-  background-color: #4CAF50;
+  background-color: #48ff1b;
   color: #fff;
-  margin-bottom: 20px;
+
   width: 40%;
+  font-size: 2rem;
+  animation: btnanimation  1s infinite;
 }
 
 #noBtn {
-  background-color: #f44336;
+  background-color: #f43636;
   color: #fff;  width: 40%;
+  font-size: 2rem;
+}
+.modal-content img{
+width: 100%;
+margin-bottom: 40px;
+}
+
+@keyframes btnanimation {
+  0%{
+    scale: 1;
+
+  } 50%{
+    scale: 1.15;
+  }
 }
